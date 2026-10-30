@@ -1,9 +1,16 @@
 {
   "total_donations": 10000,
   "top_donators": {
-    "Fajar Test": 10000
+    "Fajar Test": 10000,
+    "Anonymous": 0
   },
   "recent_donations": [
+    {
+      "username": "Anonymous",
+      "amount": 0,
+      "message": "",
+      "timestamp": "2026-10-30T19:41:41.562Z"
+    },
     {
       "username": "Fajar Test",
       "amount": 10000,
