@@ -1,5 +1,14 @@
 {
-  "total_donations": 0,
-  "top_donators": {},
-  "recent_donations": []
+  "total_donations": 10000,
+  "top_donators": {
+    "Fajar Test": 10000
+  },
+  "recent_donations": [
+    {
+      "username": "Fajar Test",
+      "amount": 10000,
+      "message": "Halo, tes ulang sistem!",
+      "timestamp": "2026-10-30T18:21:55.660Z"
+    }
+  ]
 }
