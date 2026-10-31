@@ -11,6 +11,12 @@
       "username": "Anonymous",
       "amount": 0,
       "message": "",
+      "timestamp": "2026-10-31T03:58:14.553Z"
+    },
+    {
+      "username": "Anonymous",
+      "amount": 0,
+      "message": "",
       "timestamp": "2026-10-31T03:22:14.628Z"
     },
     {
@@ -120,12 +126,6 @@
       "amount": 0,
       "message": "",
       "timestamp": "2026-10-30T19:41:41.562Z"
-    },
-    {
-      "username": "Fajar Test",
-      "amount": 10000,
-      "message": "Halo, tes ulang sistem!",
-      "timestamp": "2026-10-30T18:21:55.660Z"
     }
   ]
 }
