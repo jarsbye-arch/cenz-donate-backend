@@ -5,14 +5,9 @@ const OWNER = "jarsbye-arch";
 const REPO = "cenz-donate-backend";
 const FILE_PATH = "donators.json";
 
-module.exports = async function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method not allowed" });
-  }
-
-  // Opsional: aktif kalau env WEBHOOK_KEY diisi di Vercel
-  if (process.env.WEBHOOK_KEY && req.query.key !== process.env.WEBHOOK_KEY) {
-    return res.status(401).json({ message: "Unauthorized" });
   }
 
   try {
@@ -20,7 +15,6 @@ module.exports = async function handler(req, res) {
     const username = donator_name || "Anonymous";
     const donationAmount = Number(amount_raw ?? amount) || 0;
 
-    // Retry kalau 2 donasi masuk barengan (sha conflict)
     for (let attempt = 1; attempt <= 3; attempt++) {
       let sha = null;
       let data = { total_donations: 0, top_donators: {}, recent_donations: [] };
@@ -69,4 +63,4 @@ module.exports = async function handler(req, res) {
     console.error(error);
     return res.status(500).json({ error: error.message });
   }
-};
+}
